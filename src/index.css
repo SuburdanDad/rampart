@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Cinzel+Decorative:wght@700&display=swap');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  /* Prevent iOS text selection on game elements */
+  -webkit-user-select: none;
+  user-select: none;
+  /* Prevent callout menus on long press */
+  -webkit-touch-callout: none;
+}
+
+html, body, #root {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #080c10;
+  /* Prevent overscroll bounce on iOS */
+  overscroll-behavior: none;
+}
+
+/* Prevent double-tap zoom on iOS */
+button, div {
+  touch-action: manipulation;
+}
+
+/* Scrollable containers need explicit touch-action */
+.scrollable {
+  touch-action: pan-y;
+  -webkit-overflow-scrolling: touch;
+}
+
+::-webkit-scrollbar { display: none; }
