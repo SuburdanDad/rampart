@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+
+    <title>Rampart — Medieval Siege Warfare</title>
+    <meta name="description" content="Build walls, place cannons, sink ships. The classic arcade siege game remastered for modern devices." />
+
+    <!-- PWA / iOS Safari -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Rampart" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="theme-color" content="#080c10" />
+
+    <!-- iOS splash screens (landscape) -->
+    <!-- iPad Pro 12.9" -->
+    <link rel="apple-touch-startup-image"
+      href="/splash/splash-2048x1536.png"
+      media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" />
+    <!-- iPad Pro 11" / iPad Air -->
+    <link rel="apple-touch-startup-image"
+      href="/splash/splash-1668x1024.png"
+      media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" />
+    <!-- iPad (standard) -->
+    <link rel="apple-touch-startup-image"
+      href="/splash/splash-1024x768.png"
+      media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" />
+
+    <!-- Apple touch icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="/icons/icon-152.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144.png" />
+
+    <!-- Standard favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Rampart ⚔️" />
+    <meta property="og:description" content="Medieval siege warfare. Build walls, place cannons, sink ships." />
+    <meta property="og:type" content="website" />
+
+    <style>
+      /* Prevent iOS bounce scroll and selection */
+      html, body {
+        margin: 0; padding: 0;
+        overflow: hidden;
+        position: fixed;
+        width: 100%; height: 100%;
+        background: #080c10;
+        -webkit-tap-highlight-color: transparent;
+        -webkit-touch-callout: none;
+        touch-action: none;
+      }
+      #root {
+        width: 100%; height: 100%;
+        overflow: hidden;
+      }
+      /* Safe area support for notched iPads */
+      #root {
+        padding-top: env(safe-area-inset-top);
+        padding-bottom: env(safe-area-inset-bottom);
+        padding-left: env(safe-area-inset-left);
+        padding-right: env(safe-area-inset-right);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
